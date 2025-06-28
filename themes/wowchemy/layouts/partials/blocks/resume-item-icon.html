@@ -1,0 +1,7 @@
+{{ $institution := lower .item.institution }}
+
+{{ if or (in $institution "university of california, riverside") (in $institution "ucr") }}
+  <img src="/media/ucr.png" style="height:20px; vertical-align:middle; margin-right:8px;">
+{{ else if or (in $institution "military institute") (in $institution "mist") }}
+  <img src="/media/mist.png" style="height:20px; vertical-align:middle; margin-right:8px;">
+{{ end }}

@@ -1,0 +1,23 @@
+{{/* Overridden to remove bullet/hat icon from education/experience */}}
+{{ $page := .page }}
+{{ $section := .section }}
+
+{{ with $section.content }}
+  <div class="row">
+    <div class="col-12">
+      {{ range .items }}
+        <div class="card-simple mb-3">
+          {{ with .course }}
+            <div class="section-subheading card-title exp-title text-muted my-0">{{ . }}</div>
+          {{ end }}
+          {{ with .institution }}
+            <div class="section-subheading exp-company text-muted my-0">{{ . | safeHTML }}</div>
+          {{ end }}
+          {{ with .description }}
+            <div class="card-text">{{ . | markdownify }}</div>
+          {{ end }}
+        </div>
+      {{ end }}
+    </div>
+  </div>
+{{ end }}

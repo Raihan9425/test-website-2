@@ -1,0 +1,17 @@
+/* Style for DOI and PDF buttons in publication cards */
+.article-buttons .btn {
+  background-color: #000000 !important;  /* Black background */
+  color: #ffffff !important;             /* White text */
+  border: 1px solid #888888 !important;  /* Grey border */
+  border-radius: 6px;
+  padding: 0.4rem 0.8rem;
+  font-size: 0.85rem;
+  text-transform: none;
+  box-shadow: none;
+  transition: background-color 0.3s ease;
+}
+
+.article-buttons .btn:hover {
+  background-color: #222222 !important;
+  border-color: #000000 !important; /* Darker on hover */
+}

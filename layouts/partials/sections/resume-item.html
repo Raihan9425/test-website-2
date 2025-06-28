@@ -1,0 +1,14 @@
+{{/* layouts/partials/sections/resume-item.html */}}
+{{- $item := . -}}
+{{- $id := replace (replace (lower $item.Params.institution) " " "-" ) "," "" -}}
+
+<li id="{{ $id }}" class="mb-3 flex">
+  <div class="description">
+    {{ with $item.Params.area }}
+      <p class="course">{{ . }}</p>
+    {{ end }}
+    {{ with $item.Params.institution }}
+      <p class="institution">{{ . }}</p>
+    {{ end }}
+  </div>
+</li>

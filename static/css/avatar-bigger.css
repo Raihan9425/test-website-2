@@ -1,0 +1,13 @@
+/* static/css/avatar-bigger.css  */
+:root {
+  --avatar-size: 420px;        /* <- change just this number */
+}
+
+#profile img.avatar,
+#profile .avatar,
+.avatar-img,
+img.avatar {
+  width: var(--avatar-size) !important;
+  height: var(--avatar-size) !important;
+  max-width: var(--avatar-size) !important;
+}

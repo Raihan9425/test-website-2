@@ -1,0 +1,24 @@
+{{/* Custom About widget override to show logos in education entries */}}
+{{ $ := .root }}
+{{ $page := .page }}
+
+<div class="row">
+  <div class="col-12">
+    {{ with $page.Params.education }}
+      <h2 class="mb-4">{{ i18n "education" }}</h2>
+      {{ range . }}
+        <div class="card-simple mb-3">
+          <div class="section-subheading card-title exp-title text-muted my-0">{{ .area }}</div>
+          <div class="section-subheading exp-company text-muted my-0">
+            {{ if in .institution "University of California, Riverside" }}
+              <img src="/media/ucr.png" style="height:20px; vertical-align:middle; margin-right:6px;">
+            {{ else if in .institution "Military Institute of Science and Technology" }}
+              <img src="/media/mist.png" style="height:20px; vertical-align:middle; margin-right:6px;">
+            {{ end }}
+            {{ .institution }}
+          </div>
+        </div>
+      {{ end }}
+    {{ end }}
+  </div>
+</div>

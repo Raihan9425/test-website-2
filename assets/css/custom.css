@@ -1,0 +1,20 @@
+/* 1. Hide default hat icon (we already did this) */
+ul.ul-edu li::before { display:none!important; }
+
+/* 2. Inject logos before each list item */
+li#university-of-california-riverside::before {
+  content:"";
+  display:inline-block;
+  width:20px; height:20px;
+  margin-right:8px;
+  background:url('/media/ucr.svg') no-repeat center/contain;
+  vertical-align:middle;
+}
+li#military-institute-of-science-and-technology-(mist)::before {
+  content:"";
+  display:inline-block;
+  width:20px; height:20px;
+  margin-right:8px;
+  background:url('/media/mist.svg') no-repeat center/contain;
+  vertical-align:middle;
+}

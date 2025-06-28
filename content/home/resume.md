@@ -1,0 +1,2 @@
+widget: resume
+active: true

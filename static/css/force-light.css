@@ -1,0 +1,13 @@
+body {
+  background: #ffffff !important;
+  color: #000000 !important;
+}
+
+[data-theme="dark"] {
+  background: #ffffff !important;
+  color: #000000 !important;
+}
+
+[data-theme="dark"] a {
+  color: #1a0dab !important;
+}
