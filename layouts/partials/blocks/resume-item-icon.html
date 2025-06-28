@@ -1,9 +1,28 @@
 {{ $institution := lower .item.institution }}
 
 {{ if or (in $institution "university of california, riverside") (in $institution "ucr") }}
-  <img src="/media/ucr.svg" style="height:20px; vertical-align:middle; margin-right:8px;">
+  <div style="display: flex; align-items: center; gap: 8px;">
+    <div>
+      <img src="/media/ucr.svg" style="height: 24px;">
+    </div>
+    <div>
+      <strong>{{ .item.area }}</strong><br>
+      {{ .item.institution }}
+    </div>
+  </div>
 {{ else if or (in $institution "military institute of science and technology") (in $institution "mist") }}
-  <img src="/media/mist.svg" style="height:20px; vertical-align:middle; margin-right:8px;">
+  <div style="display: flex; align-items: center; gap: 8px;">
+    <div>
+      <img src="/media/mist.svg" style="height: 24px;">
+    </div>
+    <div>
+      <strong>{{ .item.area }}</strong><br>
+      {{ .item.institution }}
+    </div>
+  </div>
 {{ else }}
-  <!-- Hat icon removed -->
+  <div>
+    <strong>{{ .item.area }}</strong><br>
+    {{ .item.institution }}
+  </div>
 {{ end }}
